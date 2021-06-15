@@ -1,0 +1,9 @@
+name: 'Dependabot auto merge'
+description: 'Automerge native dependabot PRs if tests pass'
+inputs:
+  test-command:  # id of input
+    description: 'Test command'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
