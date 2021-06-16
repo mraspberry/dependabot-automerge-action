@@ -1,6 +1,6 @@
-FROM python:3.9-alpine
+FROM python:3.9
 
-COPY * /build
+COPY * /build/
 
 WORKDIR /build
 
