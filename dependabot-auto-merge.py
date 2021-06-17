@@ -33,7 +33,7 @@ def main():
     with open(os.getenv("GITHUB_EVENT_PATH", None), "r") as event_fd:
         event_info = json.load(event_fd)
     print(json.dumps(event_info, indent=2))
-    if event_info["pull_request"]["user"]["login"] == "dependabot":
+    if event_info["pull_request"]["user"]["login"] == "dependabot[bot]":
         if tests_pass():
             merge(event_info)
         else:
